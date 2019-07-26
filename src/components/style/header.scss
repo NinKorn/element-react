@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 0;
+    .search {
+        flex: 1;
+    }
+    .address {
+        flex: 2;
+        text-align: center;
+    }
+    .login-out {
+        flex: 1
+    }
+}
