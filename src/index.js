@@ -3,28 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'antd/dist/antd.css';
 
 (function (doc, win) {
-
-    var docE1 = doc.documentElement,
-
+    var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-
         recalc = function () {
-
-            var clientWidth = docE1.clientWidth;
-
+            var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
-
-            docE1.style.fontSize = 100 * (clientWidth / 750) + 'px';
-
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
         };
     if (!doc.addEventListener) return;
-
     win.addEventListener(resizeEvt, recalc, false);
-
     doc.addEventListener('DOMContentLoaded', recalc, false);
-
 })(document, window);
 
 ReactDOM.render(<App />, document.getElementById('root'));
